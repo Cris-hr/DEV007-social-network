@@ -10,8 +10,7 @@ import {
   arrayRemove,
   query,
   orderBy
-} from '@firebase/firestore';
-
+} from 'firebase/firestore';
 
 import {
   GoogleAuthProvider,
