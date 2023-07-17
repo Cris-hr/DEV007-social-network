@@ -351,5 +351,6 @@ export const Home = (onNavigate) => {
   HomeDiv.appendChild(bottomHomePage);
   HomeDiv.appendChild(footerHome);
 
+
   return HomeDiv;
 };
