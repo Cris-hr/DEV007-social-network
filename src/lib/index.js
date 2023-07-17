@@ -12,7 +12,6 @@ import {
   orderBy
 } from 'firebase/firestore';
 
-
 import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
@@ -109,5 +108,4 @@ export const removeLike = (id) =>
 /*
   ---------- PARA CERRAR SESIÓN ----------
 */
-
 export const logOut = () => signOut(auth);
