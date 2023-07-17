@@ -338,18 +338,34 @@ body {
     background-color: white;
     justify-content: center;
   }
+
+  .userInfo {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+
+  .userphoto {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
   
   .parrafoUsuario{
     color: #242424;
     font-weight: normal;
     font-size: x-small;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 
   .parrafoContenido{
     align-self: center;
     color: #242424;
     font-size: smaller;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .bottomPost {
@@ -834,6 +850,18 @@ body {
     border-radius: 20px;
     background-color: white;
     justify-content: center;
+  }
+
+  .userInfo {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .userphoto {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
   }
   
   .parrafoUsuario{
