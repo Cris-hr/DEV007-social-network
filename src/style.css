@@ -1333,19 +1333,18 @@ body {
     background-color: white;
     justify-content: center;
   }
-  
-  .parrafoUsuario{
+
+  .parrafoUsuario {
     color: #242424;
     font-weight: normal;
     font-size: large;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 
-  .parrafoContenido{
+  .parrafoContenido {
     align-self: center;
     color: #242424;
-    margin-top: 0rem;
+    margin-top: -1rem;
     font-size: x-large;
   }
 
@@ -1354,18 +1353,18 @@ body {
     width: 100%;
   }
 
-  .leftBottomPost{
+  .leftBottomPost {
     display: flex;
     width: 50%;
   }
 
-  .spanLikeContenedor{
+  .spanLikeContenedor {
     margin-left: 2rem;
   }
 
   .likeImg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 
   .rightBottomPost {
@@ -1374,7 +1373,6 @@ body {
     justify-content: flex-end;
     gap: 1rem;
     margin-right: 2rem;
-
   }
 
   .buttonEdit {
@@ -1494,5 +1492,17 @@ body {
     margin-top: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
+  }
+
+  .userInfo {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .userphoto {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
   }
 }

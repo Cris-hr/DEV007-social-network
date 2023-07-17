@@ -1,3 +1,4 @@
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { Home } from './components/Home.js';
 import { Register } from './components/Register.js';
 import { Login } from './components/Login.js';
@@ -19,6 +20,15 @@ export const onNavigate = (pathname) => {
 
   rootDiv.appendChild(routes[pathname](onNavigate));
 };
+
+const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    onNavigate('/');
+  } else {
+    onNavigate('/home');
+  }
+});
 
 const component = routes[window.location.pathname];
 

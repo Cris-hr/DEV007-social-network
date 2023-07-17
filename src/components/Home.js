@@ -35,7 +35,7 @@ export const Home = (onNavigate) => {
 
   buttonLogOut.addEventListener('click', () => {
     logOut().then(() => 
-    localStorage.removeItem(doc.id),
+    //localStorage.removeItem(doc.id),
     onNavigate('/'));
   });
   /*
@@ -127,11 +127,11 @@ export const Home = (onNavigate) => {
     /*
     ------ evento que guarda el texto editado ------
     */
-  modalEditBtn.addEventListener('click', () => {
-    editPost(textareaEditModal.value, id).then(() => {
+    modalEditBtn.addEventListener('click', () => {
+      editPost(textareaEditModal.value, id).then(() => {
         modalEdit.style.display = 'none';
+      });
     });
-  });
 
     const endEditModal = document.createElement('span');
     endEditModal.classList.add('endEditModal');
@@ -155,9 +155,6 @@ export const Home = (onNavigate) => {
 
   /*
   ----- función que crea el post y su contenido y recorre el array de los post -----
-  
-
-  const postsRef = querySnapshot( orderBy('time', 'desc'))
   */
   const getData = () => {
     onGetTask((querySnapshot) => {
@@ -165,9 +162,8 @@ export const Home = (onNavigate) => {
       querySnapshot.forEach((doc) => {
         const post = doc.data();
         const likesArr = post.likes;
-        console.log(likesArr);
         const postId = doc.id;
-        const time = doc.time;
+        //const time = doc.time;
 
         /*
         ----- contenedor padre del nuevo post-----
@@ -179,16 +175,19 @@ export const Home = (onNavigate) => {
         ----- parte superior postContainer ------
         */
         const topPost = document.createElement('section');
-        topPost.classList.add('topPost');  
+        topPost.classList.add('topPost');
 
         /* 
         ------ aqui se publica el contenido del nuevo post -----
         */
         const postContent = document.createElement('div');
         postContent.classList.add('postContent');
-        postContent.setAttribute('id', postId, time);
+        postContent.setAttribute('id', postId);
         postContent.innerHTML = `
-        <header class = "parrafoUsuario">${post.usuario} publicó el ${post.time} a las ${post.localTime}</header>
+        <div class = 'userInfo'>
+        <img src='https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png' alt='icono de usuario' class = 'userphoto'>
+        <p class = "parrafoUsuario">${post.usuario} dice:</p>
+        </div>
         <p class = "parrafoContenido">${post.contenido}</p>
         `;
 
@@ -284,10 +283,16 @@ export const Home = (onNavigate) => {
 
         topPost.appendChild(postContent);
 
-
         leftBottomPost.appendChild(spanLikeContenedor);
-        rightBottomPost.appendChild(buttonEdit);
-        rightBottomPost.appendChild(buttonErase);
+
+        /*
+      ------------condicion(validacion) que muestra solo al dueño del post la opcion de editar y borrar-------
+       */
+        if (auth.currentUser.email === post.usuario) {
+          rightBottomPost.appendChild(buttonEdit);
+          rightBottomPost.appendChild(buttonErase);
+        }
+
         bottomPost.appendChild(leftBottomPost);
         bottomPost.appendChild(rightBottomPost);
 
@@ -315,13 +320,16 @@ export const Home = (onNavigate) => {
   });
 
   /*
-  ---------------mostrar post---------------- 
+  ---------------mostrar post sin tener que refrescar---------------- 
   */
-  window.addEventListener('DOMContentLoaded', async () => {
-    console.log('dom');
-    getData();
-    sectionPost.innerHTML = '';
-  });
+  // console.log('uno');
+  // window.addEventListener('DOMContentLoaded', () => {
+  // console.log('dom');
+  // sectionPost.innerHTML = '';
+  // });
+  // console.log('dos');
+
+  getData();
 
   const footerHome = document.createElement('footer');
   footerHome.classList.add('footerHome');
