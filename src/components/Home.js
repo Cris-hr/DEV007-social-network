@@ -1,6 +1,3 @@
-/*
-import { async } from 'regenerator-runtime';
-*/
 import { auth, db } from '../firebase';
 import {
   agregarUnNuevoPost,
@@ -37,7 +34,9 @@ export const Home = (onNavigate) => {
   */
 
   buttonLogOut.addEventListener('click', () => {
-    logOut().then(() => onNavigate('/'));
+    logOut().then(() => 
+    localStorage.removeItem(doc.id),
+    onNavigate('/'));
   });
   /*
   ----- Contenedor de la Parte de abajo de la Homepage -----
@@ -168,6 +167,7 @@ export const Home = (onNavigate) => {
         const likesArr = post.likes;
         console.log(likesArr);
         const postId = doc.id;
+        const time = doc.time;
 
         /*
         ----- contenedor padre del nuevo post-----
@@ -186,9 +186,9 @@ export const Home = (onNavigate) => {
         */
         const postContent = document.createElement('div');
         postContent.classList.add('postContent');
-        postContent.setAttribute('id', postId);
+        postContent.setAttribute('id', postId, time);
         postContent.innerHTML = `
-        <p class = "parrafoUsuario">${post.usuario}</p>
+        <header class = "parrafoUsuario">${post.usuario} publicó el ${post.time} a las ${post.localTime}</header>
         <p class = "parrafoContenido">${post.contenido}</p>
         `;
 
@@ -224,9 +224,9 @@ export const Home = (onNavigate) => {
         likeImg.classList.add('likeImg');
         likeImg.alt = 'corazon like color';
         if (likesArr.includes(auth.currentUser.email)) {
-          likeImg.src = './imagenes/like.png';
+          likeImg.src = './imagenes/likecolor.png';
         } else {
-          likeImg.src = './imagenes/dislike.png';
+          likeImg.src = './imagenes/likemonocolor.png';
         }
 
         /*
@@ -323,6 +323,11 @@ export const Home = (onNavigate) => {
     sectionPost.innerHTML = '';
   });
 
+  const footerHome = document.createElement('footer');
+  footerHome.classList.add('footerHome');
+  footerHome.textContent = 'Red Social creada por Kathe C, Cris H y Kathy E 🐾';
+
+
   leftHeaderHome.appendChild(logoHome);
   rightHeaderHome.appendChild(buttonLogOut);
 
@@ -344,6 +349,7 @@ export const Home = (onNavigate) => {
   HomeDiv.appendChild(modalHome);
   HomeDiv.appendChild(headerHomepage);
   HomeDiv.appendChild(bottomHomePage);
+  HomeDiv.appendChild(footerHome);
 
   return HomeDiv;
 };
