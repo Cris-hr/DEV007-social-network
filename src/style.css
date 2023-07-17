@@ -243,104 +243,261 @@ body {
   /*Estilos Home*/
 
   .HomeDiv {
-    background-color: #1b444c;
-    height: 100vh;
     display: flex;
+    background-color: #1b444c;
     flex-direction: column;
   }
 
   .headerHomepage {
     display: flex;
-    flex-direction: row;
     background-color: #afb4b5;
     height: 10vh;
     width: 100%;
     margin-top: 0.8rem;
   }
-
-  .leftHome {
-    width: 30%;
+ 
+ .leftHeaderHome {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    padding-left: 1rem;
+    justify-content: flex-start;
+    padding: 0.3rem;
+    width: 50%;
   }
 
-  .logoHome {
-    width: 70%;
-  }
-
-  .rightHome {
-    width: 70%;
+  .rightHeaderHome {
     display: flex;
-    flex-direction: row;
+    width: 50%;
+    justify-content: end;
     align-items: center;
-    justify-content: flex-end;
+    padding: 0.5rem;
   }
 
-  #HomeResumePageBtn {
-    font-size: 15px;
-    padding: 0.5rem 1rem;
+  .buttonLogOut {
+    font-size: large;
+    padding: 0.5rem;
     border-radius: 40px;
-    border-color: white;
-    color: rgb(61, 60, 60);
+    border-color: #1b444c;
     cursor: pointer;
   }
 
   .bottomHomePage {
     display: flex;
-    height: 90vh;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
   }
 
   .postPublicar {
     display: flex;
+    min-height: 8vh;
+    align-items: center;
     width: 100%;
     justify-content: center;
-    height: 10%;
-    align-items: center;
+    position: relative;
   }
 
   .publicarButton {
     text-align: center;
     border: 2px solid #afb4b5;
     border-radius: 20px;
-    font-size: large;
-    padding: 0.8rem 3rem;
+    font-size: medium;
+    padding: 0.3rem 1rem;
   }
 
-  /*Estilos modal Home*/
-
-  .modalHome {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    border: 2px solid #1b444c;
-    border-radius: 20px;
-    width: 100vw;
-    height: 100vh;
-    background: rgb(0, 0, 0, 0.5);
+  .sectionPost {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
   }
 
-  .modalContentHome {
-    margin: auto;
-    padding: 1rem 1rem 2rem 1rem;
-    text-align: center;
-    background: white;
-    width: 80%;
+  #postContainer {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    height: 15vh;
+    background-color: #afb4b5;
+    border: 2px solid #452512;
     border-radius: 20px;
-    position: relative;
+  }
+
+  .topPost {
+    display: flex;
+    height: 60%;
+    padding-top: 0.5rem;
+    justify-content: center;
+  }
+
+  .postContent {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 85%;
+    border: 2px solid #452512;
+    border-radius: 20px;
+    background-color: white;
+    justify-content: center;
+  }
+  
+  .parrafoUsuario{
+    color: #242424;
+    font-weight: normal;
     font-size: x-small;
+    margin-left: 1rem;
   }
 
-  .endModalHome {
-    position: absolute;
-    top: 0.5rem;
-    right: 1.5rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #1b444c;
+  .parrafoContenido{
+    align-self: center;
+    color: #242424;
+    font-size: smaller;
   }
+
+  .bottomPost {
+    display: flex;
+    width: 100%;
+    height: 30%;
+  }
+
+  .leftBottomPost{
+    display: flex;
+    width: 50%;
+  }
+
+  .spanLikeContenedor{
+    margin-left: 1rem;
+  }
+
+  .likeImg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .rightBottomPost {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .buttonEdit {
+    border-color: #211715;
+    height: 1.5rem;
+    border-radius: 100px;
+    width: 4rem;
+    font-size: small;
+  }
+
+  .buttonErase {
+    border-color: #211715;
+    height: 1.5rem;
+    border-radius: 100px;
+    width: 4rem;
+    font-size: small;
+  }
+
+ /*Estilos modal publicar Home*/
+
+ .modalHome {   /*contenedor padre del modal*/
+  display: none;
+  position: fixed;
+  z-index: 1;
+  border: 2px solid #1b444c;
+  border-radius: 20px;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.5); /*opacidad del fondo al abrir el modal*/
+}
+
+.modalContentHome {    /*contenedor donde se hace la publicacion*/
+  margin: auto;
+  padding: 5rem 1rem 5rem 1rem;
+  text-align: center;
+  background: white;
+  width: 30%;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /*para separar el boton publicar con el textArea*/
+}
+
+.endModalHome {
+  position: absolute;
+  top: 0.5rem;
+  right: 2.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #1b444c;
+}
+
+.textAreaModal {
+  height: 80px;
+}
+
+.modalBtnHome {
+  background: orange;
+  border-radius: 7px;
+  border: 2px solid #211715;
+  cursor: pointer;
+  height: 30px;
+}
+
+ /*Estilos modal Home-Editar*/
+
+ .modalEdit {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  border: 2px solid #1b444c;
+  border-radius: 20px;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+.modalContentEdit {
+  margin: auto;
+  padding: 5rem 1rem 5rem 1rem;
+  text-align: center;
+  background: white;
+  width: 30%;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.endEditModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 2.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #1b444c;
+}
+
+.textareaEditModal {
+  height: 80px;
+}
+
+.modalEditBtn {
+  background: orange;
+  border-radius: 7px;
+  border: 2px solid #211715;
+  cursor: pointer;
+  height: 30px;
+}
+
+.footerHome{
+  display: flex;
+  justify-content: center;
+  background-color: #afb4b5;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
 }
 
 @media (min-width: 770px) and (max-width: 1200px) {   /* Estilos para pantallas medianas */
