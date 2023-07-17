@@ -27,7 +27,7 @@ export const Home = (onNavigate) => {
   logoHome.src = './imagenes/logoFinal.png';
 
   const rightHeaderHome = document.createElement('div');
-  rightHeaderHome.classList.add('rigthHeaderHome');
+  rightHeaderHome.classList.add('rightHeaderHome');
 
   const buttonLogOut = document.createElement('button');
   buttonLogOut.classList.add('buttonLogOut');
@@ -53,7 +53,7 @@ export const Home = (onNavigate) => {
 
   const publicarButton = document.createElement('button');
   publicarButton.classList.add('publicarButton');
-  publicarButton.textContent = 'Escribe lo que quieras publicar';
+  publicarButton.textContent = 'Escribe lo que quieras publicar 🐾';
 
   /*
   ----- Evento que abre el modal para publicar post-----
@@ -156,9 +156,6 @@ export const Home = (onNavigate) => {
 
   /*
   ----- función que crea el post y su contenido y recorre el array de los post -----
-  
-
-  const postsRef = querySnapshot( orderBy('time', 'desc'))
   */
   const getData = () => {
     onGetTask((querySnapshot) => {
@@ -166,7 +163,6 @@ export const Home = (onNavigate) => {
       querySnapshot.forEach((doc) => {
         const post = doc.data();
         const likesArr = post.likes;
-        console.log(likesArr);
         const postId = doc.id;
 
         /*
@@ -188,8 +184,11 @@ export const Home = (onNavigate) => {
         postContent.classList.add('postContent');
         postContent.setAttribute('id', postId);
         postContent.innerHTML = `
-        <header>${post.usuario}</header>
-        <p>${post.contenido}</p>
+        <div class = 'userInfo'>
+        <img src='https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png' alt='icono de usuario' class = 'userphoto'>
+        <p class = "parrafoUsuario">${post.usuario} dice:</p>
+        </div>
+        <p class = "parrafoContenido">${post.contenido}</p>
         `;
 
         /*
@@ -197,6 +196,12 @@ export const Home = (onNavigate) => {
         */
         const bottomPost = document.createElement('section');
         bottomPost.classList.add('bottomPost');
+
+        const leftBottomPost = document.createElement('div');
+        leftBottomPost.classList.add('leftBottomPost');
+
+        const rightBottomPost = document.createElement('div');
+        rightBottomPost.classList.add('rightBottomPost');
 
         /*
         ------ contenedor likes ------
@@ -278,9 +283,18 @@ export const Home = (onNavigate) => {
 
         topPost.appendChild(postContent);
 
-        bottomPost.appendChild(spanLikeContenedor);
-        bottomPost.appendChild(buttonEdit);
-        bottomPost.appendChild(buttonErase);
+        leftBottomPost.appendChild(spanLikeContenedor);
+
+        /*
+------------condicion(validacion) que muestra solo al dueño del post la opcion de editar y borrar-------
+       */
+        if (auth.currentUser.email === post.usuario) {
+          rightBottomPost.appendChild(buttonEdit);
+          rightBottomPost.appendChild(buttonErase);
+        }
+
+        bottomPost.appendChild(leftBottomPost);
+        bottomPost.appendChild(rightBottomPost);
 
         postContainer.appendChild(topPost);
         postContainer.appendChild(bottomPost);
@@ -306,13 +320,15 @@ export const Home = (onNavigate) => {
   });
 
   /*
-  ---------------mostrar post---------------- 
+  ---------------mostrar post sin tener que refrescar---------------- 
   */
-  window.addEventListener('DOMContentLoaded', async () => {
-    console.log('dom');
-    getData();
-    sectionPost.innerHTML = '';
-  });
+  // console.log('uno');
+  // window.addEventListener('DOMContentLoaded', () => {
+  // console.log('dom');
+  // sectionPost.innerHTML = '';
+  // });
+  // console.log('dos');
+  getData();
 
   leftHeaderHome.appendChild(logoHome);
   rightHeaderHome.appendChild(buttonLogOut);
