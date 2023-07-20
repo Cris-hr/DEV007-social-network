@@ -34,10 +34,9 @@ export const Home = (onNavigate) => {
   */
 
   buttonLogOut.addEventListener('click', () => {
-    logOut().then(() => 
-    //localStorage.removeItem(doc.id),
-    onNavigate('/'));
+    logOut().then(() => onNavigate('/'));
   });
+
   /*
   ----- Contenedor de la Parte de abajo de la Homepage -----
   */
@@ -163,7 +162,6 @@ export const Home = (onNavigate) => {
         const post = doc.data();
         const likesArr = post.likes;
         const postId = doc.id;
-        //const time = doc.time;
 
         /*
         ----- contenedor padre del nuevo post-----
@@ -335,7 +333,6 @@ export const Home = (onNavigate) => {
   footerHome.classList.add('footerHome');
   footerHome.textContent = 'Red Social creada por Kathe C, Cris H y Kathy E 🐾';
 
-
   leftHeaderHome.appendChild(logoHome);
   rightHeaderHome.appendChild(buttonLogOut);
 
@@ -358,7 +355,6 @@ export const Home = (onNavigate) => {
   HomeDiv.appendChild(headerHomepage);
   HomeDiv.appendChild(bottomHomePage);
   HomeDiv.appendChild(footerHome);
-
 
   return HomeDiv;
 };
