@@ -10,41 +10,68 @@
 
 ## 1. Introducción:
 
-Te presentamos una red social para mascotas llamada Hppy Pets, en la que los usuarios podrán publicar artículos sobre sus mascotas.
+Te presentamos una red social para mascotas llamada Happy Pets, en la que los usuarios podrán publicar artículos sobre sus mascotas.
+
+![Logo](./src/imagenes/logoFinal.png)
 
 ## 2. Resumen del proyecto
 
-En esta red social podrá visualizar una interfaz de usuario para los amantes de mascotas, ésta página le permitirá registrarse con su nombre, correo electrónico y contraseña o también podra acceder con su cuenta de google para luego poder acceder a la Home, que es la pagina donde podrá hacer sus publicaciones.
+Happy-Pets  Es una red social que ha sido creada para todos aquellos  amantes de las mascotas  que siempre quieren recibir o dar tips de ayuda para otros tenentes responsables, y que quieren compartir fotografias para presumir a sus mascotas.
 
-salud, energías renovables, amantes de las [Empanadas](https://es.wikipedia.org/wiki/Empanada)
-o de los [Tacos de Canasta](https://es.wikipedia.org/wiki/Taco),
-de la [Feijoada](https://es.wikipedia.org/wiki/Feijoada), o de lo que sea.
+Esta página le permitirá registrarse con su nombre, correo electrónico y contraseña o también podrá iniciar sesión con su cuenta de google para luego poder acceder a la Home, que es el feed donde podrá hacer sus publicaciones.
 
 ### Principales usuarios
 
-* Los principales usuarios son todas aquellas personas amantes de las mascotas (perros y gatos), ya que en esta   red social podrán compartir todo sobre sus mascotas como: tips, consejos, recomendaciones, etc.
+* Los principales usuarios son todas aquellas personas amantes de las mascotas (perros y gatos), ya que en esta red social podrán compartir todo sobre sus mascotas como: tips, consejos, recomendaciones, etc.
 
 ## 3. Funcionalidad:
 
 Te mostraré paso a paso las funcionalidades que tiene esta red social y para ello nos basamos en historias de usuario.
 
+### Investigación
+
+* Para la investigación hemos visitado variados sitios de redes sociales para mascotas, páginas enfocadas a la salud de peluditos y publicaciones similares, de allí hemos tomado los principales ideas que usan la mayoria de los sitios junto con lo que más publican las personas y es por eso que tenemos los siguientes resultado en las decisiones del diseño:
+
+### Decisiones de diseño basados en la investigación:
+
+Hemos decidido usar el color la siguiente paleta de colores ya que este llama la atención visualmente y es muy usado en sitios de mascotas.
+
+![Paletadecolores](./img-readme/paletadecolores.jpg)
+
+En base a lo investigado hemos decidido tambien crear una sección para publicar post con tips ya que nuestros encuestados lo pidideron y por que es común que las personas quieran ver y compartir tips de mascotas, con esto le damos un plus a nuestro sitio.
+
+* Encuesta
+
+Realizamos una encuesta mediante formulario de Google y luego la compartimos de manera pública.
+
+Puedes ver las preguntas haciendo [click aquí.](https://docs.google.com/forms/d/1HlqoZLrLHU9HN4IlXr_InlvY0mu6WpbkD4MfunywrB8/viewform?edit_requested=true)
+
+Resultados Encuesta
+Total personas encuestadas: 35
+
+Pregunta 1
+
+![pregunta1](./img-readme/preguntauno.png)
+
+Pregunta 2
+
+![pregunta2](./img-readme/preguntados.png)
+
+Pregunta 3
+
+![pregunta3](./img-readme/preguntatres.png)
+
+Pregunta 4
+
+![pregunta4](./img-readme/preguntacuatro.png)
+
+
+
 ### Histtoria de usuario Nº01-Crear una cuenta con email y contraseña.
 
 ## Descripción:
 
-  <details><summary>Links</summary><p>
-
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
-
-### CSS
-
-- [ ] **Uso de selectores de CSS**
-
-  <details><summary>Links</summary><p>
-
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
+ ratoria.la/es/topics/css/01-css/01-intro-css)
   * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
 </p></details>
 
