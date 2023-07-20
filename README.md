@@ -113,8 +113,11 @@ Te mostraré paso a paso las funcionalidades que tiene esta red social y para el
 
 ### Historia de usuario Nº04 - Mostrar una sección para compartir publicaciones.
 
+![escribirpost](./img-readme/seccionpublicarpost.png)
+
 ### Historia de usuario Nº05 - Mostrar publicaciones de otros usuarios.
 
+![logincongoogle](./img-readme/mostrarpublicacionesdeotrosusuarios.png)
 
 ## 5. Consideraciones generales
 
