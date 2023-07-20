@@ -28,7 +28,7 @@ Los principales usuarios son todas aquellas personas amantes de las mascotas (pe
 
 ### Sobre el sitio web
 
-¿Por qué Happy - Pets?
+¿Por qué Happy-Pets?
 
 El nombre nace por ambos conceptos que serán empleados en nuestro sitio y que tiene justamente que ver con las mascotas felices y sus tenentes responsables.
 
@@ -84,13 +84,11 @@ Realizamos la interfaz de usuario en la aplicación [Figma](https://www.figma.co
 
 * Versión Movil
 
-![loginmovil](./img-readme/disenologinmovil.jpeg)
-
-![registermovil](./img-readme/disenoregistermovil.jpeg)
-
-* Versión Tablet
+![movil](./img-readme/prototipoaltamovil.png)
 
 * Versión Desktop
+
+![desktop](./img-readme/prototipoaltadesktop.png)
 
 **Planear y ejecutar testeos de usabilidad**
 
