@@ -40,8 +40,7 @@ export const Register = (onNavigate) => {
   const registerConCuenta = document.createElement('p');
   registerConCuenta.classList.add('registerConCuenta');
   registerConCuenta.innerHTML += `
-  ¿Ya tienes cuenta? <a href="/" class="linkConCuenta"> Inicia sesión </a>
-`;
+  ¿Ya tienes cuenta? <a href="/" class="linkConCuenta"> Inicia sesión </a>`;
 
   buttonRegistro.addEventListener('click', (e) => {
     e.preventDefault();
