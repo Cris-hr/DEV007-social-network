@@ -50,6 +50,7 @@ Realizamos una encuesta mediante formulario de Google y luego la compartimos de 
 Puedes ver las preguntas haciendo [click aquí.](https://docs.google.com/forms/d/1HlqoZLrLHU9HN4IlXr_InlvY0mu6WpbkD4MfunywrB8/viewform?edit_requested=true)
 
 Resultados Encuesta
+
 Total personas encuestadas: 35
 
 Pregunta 1
@@ -68,21 +69,27 @@ Pregunta 4
 
 ![pregunta4](./img-readme/preguntacuatro.png)
 
-Los usuarios son mujeres y hombres , quienes han tenido alguna vez en su vida una o más mascotas, lo escencial era saber si estarian interesados en compartir con otras personas fotografías de sus mascotas y/o tips sobre salud y nutrición de sus peluditos.
+Los usuarios son mujeres y hombres, quienes han tenido alguna vez en su vida una o más mascotas, lo esencial era saber si estarían interesados en compartir con otras personas fotografías de sus mascotas y/o tips sobre salud y nutrición de sus peluditos.
 
-* Prototipo Alta Fidelidad
+**Prototipo Baja Fidelidad**
+
+![prototipobaja1](./img-readme/prototipobaja1.png)
+
+![prototipobaja2](./img-readme/prototipobaja2.png)
+
+**Prototipo Alta Fidelidad**
 
 Realizamos la interfaz de usuario en la aplicación [Figma](https://www.figma.com/), a continiación puedes ver los prototipos hechos:
 
-**Versión Movil**
+* Versión Movil
 
 ![loginmovil](./img-readme/disenologinmovil.jpeg)
 
 ![registermovil](./img-readme/disenoregistermovil.jpeg)
 
-**Versión Tablet**
+*Versión Tablet
 
-**Versión Desktop**
+*Versión Desktop
 
 
 ## 4. Funcionalidad:
