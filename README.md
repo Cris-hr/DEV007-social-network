@@ -101,9 +101,15 @@ Te mostraré paso a paso las funcionalidades que tiene esta red social y para el
 
 ### Historia de usuario Nº01 - Crear una cuenta con email y contraseña.
 
+![register](./img-readme/Registro.jpeg)
+
 ### Historia de usuario Nº02 - Iniciar sesión con correo y contraseña.
 
+![login](./img-readme/Login.jpeg)
+
 ### Historia de usuario Nº03 - Iniciar sesión con una cuenta de Google.
+
+![logincongoogle](./img-readme/logingoogle.jpeg)
 
 ### Historia de usuario Nº04 - Mostrar una sección para compartir publicaciones.
 
