@@ -20,7 +20,9 @@ export const onNavigate = (pathname) => {
 
   rootDiv.appendChild(routes[pathname](onNavigate));
 };
-
+/*
+para el deslogueo
+*/
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
   if (!user) {
