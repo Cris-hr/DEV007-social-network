@@ -6,6 +6,7 @@
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Decisiones de diseño del proyecto](#3-decisiones-de-diseño-del-proyecto)
 * [4. Funcionalidad](#4-funcionalidad)
+* [5. Consideraciones generales](#5-consideraciones-generales)
 
 ## 1. Introducción:
 
@@ -21,7 +22,7 @@ Esta página le permitirá registrarse con su nombre, correo electrónico y cont
 
 ### Principales usuarios
 
-* Los principales usuarios son todas aquellas personas amantes de las mascotas (perros y gatos), ya que en esta red social podrán compartir todo sobre sus mascotas como: tips, consejos, recomendaciones, etc.
+Los principales usuarios son todas aquellas personas amantes de las mascotas (perros y gatos), ya que en esta red social podrán compartir todo sobre sus mascotas como: tips, consejos, recomendaciones, etc.
 
 ## 3. Decisiones de diseño del proyecto:
 
@@ -49,7 +50,7 @@ Realizamos una encuesta mediante formulario de Google y luego la compartimos de 
 
 Puedes ver las preguntas haciendo [click aquí.](https://docs.google.com/forms/d/1HlqoZLrLHU9HN4IlXr_InlvY0mu6WpbkD4MfunywrB8/viewform?edit_requested=true)
 
-Resultados Encuesta
+Resultados Encuesta:
 
 Total personas encuestadas: 35
 
@@ -91,60 +92,30 @@ Realizamos la interfaz de usuario en la aplicación [Figma](https://www.figma.co
 
 * Versión Desktop
 
+**Planear y ejecutar testeos de usabilidad**
+
 
 ## 4. Funcionalidad:
 
 Te mostraré paso a paso las funcionalidades que tiene esta red social y para ello nos basamos en historias de usuario.
 
-### Historia de usuario Nº01-Crear una cuenta con email y contraseña.
+### Historia de usuario Nº01 - Crear una cuenta con email y contraseña.
 
-## Descripción:
-- [ ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
+### Historia de usuario Nº02 - Iniciar sesión con correo y contraseña.
 
-### Diseño de producto
+### Historia de usuario Nº03 - Iniciar sesión con una cuenta de Google.
 
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
+### Historia de usuario Nº04 - Mostrar una sección para compartir publicaciones.
 
-- [ ] **Seguir los principios básicos de diseño visual**
-
-### Investigación
-
-- [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
-
-  <details><summary>Links</summary><p>
-
-  * [Intro a testeos usabilidad](https://coda.io/@bootcamp-laboratoria/contenido-ux/test-de-usabilidad-15)
-  * [Pruebas con Usuarios 1 — ¿Qué, cuándo y para qué testeamos?](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
-</p></details>
+### Historia de usuario Nº05 - Mostrar publicaciones de otros usuarios.
 
 
-## 4. Consideraciones generales
+## 5. Consideraciones generales
 
-* Este proyecto se debe trabajar en equipos de tres.
+* Este proyecto lo trabajamos en equipo de tres.
 
-* El rango de tiempo estimado para completar el proyecto es de 4 a 5 Sprints.
+* El tiempo que nos tomó completar el proyecto fue de 6 Sprints.
 
-* La lógica del proyecto debe estar implementada completamente en JavaScript
-  (ES6+), HTML y CSS :smiley:. Para este proyecto **no está permitido** utilizar
+* La lógica del proyecto está implementada completamente en JavaScript
+  (ES6+), HTML y CSS :smiley:. Para este proyecto **no utilizamos**
   _frameworks_ o librerías de CSS y JS.
-
-* La división y organización del trabajo debe permitir, sin excepciones, que
-  **cada integrante** del equipo practique el aprendizaje de todo lo involucrado
-  en **cada historia**. _No se dividan el trabajo como en una fábrica._
-  - ¿Hasta acá has avanzado en tus proyectos con cierta fluidez y sin mayores
-    problemas? Sé generosa con tus compañeras, permíteles aprender y practicar
-    sin restricciones, aunque tome un poco más de tiempo. Aproveha de
-    _coachearlas_, de hacer _pair programming_, una de las mejores maneras de
-    aprender es explicando verbalmente.
-
-  - ¿Se te está haciendo difícil y te cuesta un poco más avanzar? No te quedes
-    con las partes "fáciles" del proyecto, conversa, negocia, exige tu oportunidad
-    para practicar y aprender lo que se te hace más difícil.
-
-* Solamente pueden trabajar en una única historia por vez, no pueden avanzar a
-  la siguiente sin haber completado la anterior. La historia se completa cuando
-  se cumplen **todos** sus Criterios de Aceptación + **toda** su Definición
-  de Terminado.
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este repositorio.
-
