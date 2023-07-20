@@ -33,7 +33,7 @@ El nombre nace por ambos conceptos que serán empleados en nuestro sitio y que t
 
 ### Investigación
 
-* Para la investigación hemos visitado variados sitios de redes sociales para mascotas, páginas enfocadas a la salud de peluditos y publicaciones similares, de allí hemos tomado los principales ideas que usan la mayoria de los sitios junto con lo que más publican las personas y es por eso que tenemos los siguientes resultado en las decisiones del diseño:
+Para la investigación hemos visitado variados sitios de redes sociales para mascotas, páginas enfocadas a la salud de peluditos y publicaciones similares, de allí hemos tomado los principales ideas que usan la mayoria de los sitios junto con lo que más publican las personas y es por eso que tenemos los siguientes resultado en las decisiones del diseño:
 
 ### Decisiones de diseño basados en la investigación:
 
@@ -43,7 +43,7 @@ Hemos decidido usar el color la siguiente paleta de colores ya que este llama la
 
 En base a lo investigado hemos decidido tambien crear una sección para publicar post con tips ya que nuestros encuestados lo pidideron y por que es común que las personas quieran ver y compartir tips de mascotas, con esto le damos un plus a nuestro sitio.
 
-* Encuesta
+**Encuesta**
 
 Realizamos una encuesta mediante formulario de Google y luego la compartimos de manera pública.
 
@@ -87,9 +87,9 @@ Realizamos la interfaz de usuario en la aplicación [Figma](https://www.figma.co
 
 ![registermovil](./img-readme/disenoregistermovil.jpeg)
 
-*Versión Tablet
+* Versión Tablet
 
-*Versión Desktop
+* Versión Desktop
 
 
 ## 4. Funcionalidad:
