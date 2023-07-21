@@ -1,7 +1,3 @@
-/*
-importamos la funcion que vamos a testear
-//import { myFunction } from '../src/lib/index';
-*/
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -33,7 +29,7 @@ describe('iniciarSesionConCorreoYContraseña', () => {
     expect(typeof iniciarSesionConCorreoYContraseña).toBe('function');
   });
 
-  it('Deveria llamar a la funcion signInWithEmailAndPassword cuando es ejecutada', async () => {
+  it('Debería llamar a la funcion signInWithEmailAndPassword cuando es ejecutada', async () => {
     await iniciarSesionConCorreoYContraseña(
       'mari-cielo12@gmail.com',
       'maricielo12'
@@ -42,11 +38,6 @@ describe('iniciarSesionConCorreoYContraseña', () => {
   });
 
   it('Deveria devolver un objeto', async () => {
-    /*
-    const mockedFunction = jest.fn().mockReturnValueOnce({
-      user: { email: 'mari-cielo12@gmail.com' }
-    });
-    */
     signInWithEmailAndPassword.mockReturnValueOnce({
       user: { email: 'mari-cielo12@gmail.com' }
     });
@@ -59,16 +50,13 @@ describe('iniciarSesionConCorreoYContraseña', () => {
 });
 
 describe('initSessionsWithGoogle', () => {
-  it('Deveria llamar a la funcion signInWithPopup cuando es ejecutada', async () => {
+  it('Deberia llamar a la funcion signInWithPopup cuando es ejecutada', async () => {
     await initSessionsWithGoogle();
     expect(signInWithPopup).toHaveBeenCalled();
   });
   it('Deveria devolver un objeto', async () => {
     signInWithPopup.mockReturnValueOnce({});
     const conGoogle = await initSessionsWithGoogle();
-    /*
-    console.log(conGoogle);
-    */
     expect(conGoogle).toEqual({});
   });
 });

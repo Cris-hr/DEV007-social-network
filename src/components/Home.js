@@ -154,7 +154,10 @@ export const Home = (onNavigate) => {
 
   /*
   ----- función que crea el post y su contenido y recorre el array de los post -----
+  querySnapshot = almacena o guarda todos los documentos o info, que se solicita a firestore
+  se ejecuta cada vez que hay un cambio en el documento
   */
+
   const getData = () => {
     onGetTask((querySnapshot) => {
       sectionPost.innerHTML = '';
@@ -164,7 +167,7 @@ export const Home = (onNavigate) => {
         const postId = doc.id;
 
         /*
-        ----- contenedor padre del nuevo post-----
+        ----- contenedor padre del nuevo post, que se van creando cada vez que se agrega un n uevo post-----
         */
         const postContainer = document.createElement('div');
         postContainer.setAttribute('id', 'postContainer');
