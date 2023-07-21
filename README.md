@@ -2,11 +2,11 @@
 
 ## Índice
 
-* [1. Introduccion](#1-introduccion)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Decisiones de diseño del proyecto](#3-decisiones-de-diseño-del-proyecto)
-* [4. Funcionalidad](#4-funcionalidad)
-* [5. Consideraciones generales](#5-consideraciones-generales)
+- [1. Introduccion](#1-introduccion)
+- [2. Resumen del proyecto](#2-resumen-del-proyecto)
+- [3. Decisiones de diseño del proyecto](#3-decisiones-de-diseño-del-proyecto)
+- [4. Funcionalidad](#4-funcionalidad)
+- [5. Consideraciones generales](#5-consideraciones-generales)
 
 ## 1. Introducción:
 
@@ -16,7 +16,7 @@ Te presentamos una red social para mascotas llamada Happy Pets, en la que los us
 
 ## 2. Resumen del proyecto
 
-Happy-Pets  Es una red social que ha sido creada para todos aquellos  amantes de las mascotas  que siempre quieren recibir o dar tips de ayuda para otros tenentes responsables, y que quieren compartir fotografias para presumir a sus mascotas.
+Happy-Pets Es una red social que ha sido creada para todos aquellos amantes de las mascotas que siempre quieren recibir o dar tips de ayuda para otros tenentes responsables, y que quieren compartir fotografias para presumir a sus mascotas.
 
 Esta página le permitirá registrarse con su nombre, correo electrónico y contraseña o también podrá iniciar sesión con su cuenta de google para luego poder acceder a la Home, que es el feed donde podrá hacer sus publicaciones.
 
@@ -82,16 +82,13 @@ Los usuarios son mujeres y hombres, quienes han tenido alguna vez en su vida una
 
 Realizamos la interfaz de usuario en la aplicación [Figma](https://www.figma.com/), a continiación puedes ver los prototipos hechos:
 
-* Versión Movil
+- Versión Movil
 
 ![movil](./img-readme/prototipoaltamovil.png)
 
-* Versión Desktop
+- Versión Desktop
 
 ![desktop](./img-readme/prototipoaltadesktop.png)
-
-**Planear y ejecutar testeos de usabilidad**
-
 
 ## 4. Funcionalidad:
 
@@ -99,30 +96,84 @@ Te mostraré paso a paso las funcionalidades que tiene esta red social y para el
 
 ### Historia de usuario Nº01 - Crear una cuenta con email y contraseña.
 
-![register](./img-readme/Registro.jpeg)
+#### Descripción:
 
-### Historia de usuario Nº02 - Iniciar sesión con correo y contraseña.
+Como usuario nuevo debo poder crear una cuenta con email y password válidos para poder iniciar sesion e ingresar a la red social
+
+#### Criterios de aceptación:
+
+- Debe ser responsive
+- No debe necesitar recargar la página para crear una cuenta (SPA)
+- No pueden haber usuarios repetidos.
+- Lo que se escriba en el campo (input) de contraseña debe ser secreto.
+
+#### Definición de terminado:
+
+- La funcionalidad cumple satisface los criterios de aceptación.
+- La funcionalidad cubre test unitario con un mínimo de 70%.
+- El diseño visual corresponde al prototipo de alta fidelidad.
+- La funcionalidad esta desplegada y pública para ser probada.
+- La funcionalidad fue probada manualmente.
+- Se hicieron pruebas de usuabilidad.
 
 ![login](./img-readme/Login.jpeg)
 
-### Historia de usuario Nº03 - Iniciar sesión con una cuenta de Google.
+![register](./img-readme/Registro.jpeg)
+
+### Historia de usuario Nº02 - Iniciar sesión con Google.
+
+#### Descripción:
+
+Como usuario nuevo debo poder tener la opción de iniciar sesión con mi cuenta de Google para ingresar a la red social sin necesidad de crear una cuenta de email válido.
+
+#### Criterios de aceptación:
+
+- mostrar la opción de ingresar a la red social con Google.
+- Debe ser responsive
+- No debe necesitar recargar la página para crear una cuenta (SPA)
+
+#### Definición de terminado:
+
+- La funcionalidad cumple satisface los criterios de aceptación.
+- La funcionalidad cubre test unitario con un mínimo de 70%.
+- El diseño visual corresponde al prototipo de alta fidelidad.
+- La funcionalidad esta desplegada y pública para ser probada. (GitHub)
+- La funcionalidad fue probada manualmente.
+- Se hicieron pruebas de usuabilidad.
 
 ![logincongoogle](./img-readme/logingoogle.jpeg)
 
-### Historia de usuario Nº04 - Mostrar una sección para compartir publicaciones.
+### Historia de usuario Nº03 - Postear, dar like, editar y borrar los post.
+
+#### Descripción:
+
+Como usuario ya logueado debo poder hacer una publicación de un post, dar y quitar el like y como dueño del post tambien puedo editar y borrar mi propio post.
+
+#### Criterios de aceptación:
+
+- mostrar un boton que abre un modal para poder crear un post.
+- Debe ser responsive.
+- No debe necesitar recargar la página para crear una cuenta (SPA)
+
+#### Definición de terminado:
+
+- La funcionalidad cumple satisface los criterios de aceptación.
+- La funcionalidad cubre test unitario con un mínimo de 70%.
+- El diseño visual corresponde al prototipo de alta fidelidad.
+- La funcionalidad esta desplegada y pública para ser probada. (GitHub)
+- La funcionalidad fue probada manualmente.
+- Se hicieron pruebas de usuabilidad.
 
 ![escribirpost](./img-readme/seccionpublicarpost.png)
-
-### Historia de usuario Nº05 - Mostrar publicaciones de otros usuarios.
 
 ![logincongoogle](./img-readme/mostrarpublicacionesdeotrosusuarios.png)
 
 ## 5. Consideraciones generales
 
-* Este proyecto lo trabajamos en equipo de tres.
+- Este proyecto lo trabajamos en equipo de tres.
 
-* El tiempo que nos tomó completar el proyecto fue de 6 Sprints.
+- El tiempo que nos tomó completar el proyecto fue de 6 Sprints.
 
-* La lógica del proyecto está implementada completamente en JavaScript
+- La lógica del proyecto está implementada completamente en JavaScript
   (ES6+), HTML y CSS :smiley:. Para este proyecto **no utilizamos**
   _frameworks_ o librerías de CSS y JS.
