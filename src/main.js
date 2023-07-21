@@ -25,7 +25,9 @@ para el deslogueo
 */
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
-  if (!user) {
+  if (window.location.pathname === '/register') {
+    onNavigate('/register');
+  } else if (!user && window.location.pathname !== '/register') {
     onNavigate('/');
   } else {
     onNavigate('/home');

@@ -34,11 +34,9 @@ export const Home = (onNavigate) => {
   */
 
   buttonLogOut.addEventListener('click', () => {
-    logOut().then(() =>
-      // localStorage.removeItem(doc.id),
-      onNavigate('/')
-    );
+    logOut().then(() => onNavigate('/'));
   });
+
   /*
   ----- Contenedor de la Parte de abajo de la Homepage -----
   */
@@ -164,7 +162,6 @@ export const Home = (onNavigate) => {
         const post = doc.data();
         const likesArr = post.likes;
         const postId = doc.id;
-        // const time = doc.time;
 
         /*
         ----- contenedor padre del nuevo post-----
