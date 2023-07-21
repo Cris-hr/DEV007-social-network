@@ -2,7 +2,6 @@ import { crearUsuarioConCorreoYContraseña } from '../lib';
 
 export const Register = (onNavigate) => {
   const registerDiv = document.createElement('div');
-
   registerDiv.classList.add('registerDiv');
 
   const topRegister = document.createElement('section');

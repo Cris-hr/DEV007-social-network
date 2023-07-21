@@ -34,7 +34,9 @@ export const Login = (onNavigate) => {
   const loginButton = document.createElement('button');
   loginButton.classList.add('loginButton1');
   loginButton.textContent = 'Iniciar sesión';
-
+  /*
+el (a) es un ancla que es como un enlace que te redirige  a donde quieras
+*/
   const forgetLink = document.createElement('a');
   forgetLink.classList.add('forgetLk');
   forgetLink.textContent = ' ¿Olvidaste tu contraseña? ';
@@ -52,6 +54,9 @@ export const Login = (onNavigate) => {
   <input class = "modalInput" placeholder = "Correo electrónico"></input>
   <button class = "modalButton"> Continuar </button> 
 `;
+  /*
+----------para cerrar el modal de olvidaste tu contraseña?-------
+*/
   const closeModal = document.createElement('span');
   closeModal.classList.add('closeModal');
   closeModal.innerHTML = '&times;';
@@ -86,15 +91,21 @@ export const Login = (onNavigate) => {
   const errorPassword = document.createElement('span');
   errorPassword.classList.add('errorPassword');
   errorPassword.textContent = '';
-
+  /*
+-----------forgetLink es la constante del olvidaste tu contrseña?  (linea 40)---------
+*/
   forgetLink.addEventListener('click', () => {
     document.querySelector('.modalWindow').style.display = 'flex';
   });
-
+  /*
+-----------closeModal es la constante de "x" que cierra el modal(linea 60)---------
+*/
   closeModal.addEventListener('click', () => {
     document.querySelector('.modalWindow').style.display = 'none';
   });
-
+  /*
+evento que escucha al dar click al boton login para llevarlo a la home cuando inicie cesion con el correo y contraseña------
+*/
   loginButton.addEventListener('click', async () => {
     try {
       const loginEmail = inputUsermail.value;
@@ -102,6 +113,9 @@ export const Login = (onNavigate) => {
       await iniciarSesionConCorreoYContraseña(loginEmail, loginPassword);
       onNavigate('/home');
     } catch (error) {
+      /*
+      -----errorCode que atrapa el codigo erroneo------
+      */
       const errorCode = error.code;
       if (errorCode === 'auth/wrong-password') {
         loginContainer.querySelector(
@@ -115,7 +129,9 @@ export const Login = (onNavigate) => {
       }
     }
   });
-
+  /*
+------evento que escucha al boton para iniciar sesion con google-----
+*/
   googleButton.addEventListener('click', () => {
     initSessionsWithGoogle().then(() => {
       onNavigate('/home');
